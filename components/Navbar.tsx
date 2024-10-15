@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav className='fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly'>
             <a href='#home' className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
-             opacity-80 text-3xl font-semibold transition-all duration-300 hover:opacity-100'>
+             opacity-100 text-3xl font-semibold font-great transition-all duration-300 hover:opacity-80'>
                 Osama
             </a>
 
