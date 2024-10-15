@@ -2,32 +2,72 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import React from 'react'
+import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 
 import { Typewriter,  } from 'react-simple-typewriter';
 const Hero = () => {
+
+  const [scrollDirection, setScrollDirection] = useState('down');
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const updateScrollDirection = () => {
+      const scrollY = window.scrollY;
+      setScrollDirection(scrollY > lastScrollY ? 'down' : 'up');
+      lastScrollY = scrollY;
+    };
+
+    window.addEventListener('scroll', updateScrollDirection);
+    return () => {
+      window.removeEventListener('scroll', updateScrollDirection);
+    };
+  }, []);
+
+
   return (
     <div id='home' className='px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-32'>
       <div className='flex flex-col items-center justify-center gap-10 text-white'>
-        <div>
+        <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{
+          y: scrollDirection === 'down' ? 50 : -50,  // Change y based on scroll direction
+          opacity: 1
+        }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        
+        >
           <Image
           src="/myphoto.jpg"
           alt='Osama'
           height={500}
           width={500} 
-          className='w-[300px] cursor-pointer rounded-full shadow-xl shadow-red-600 transition-all duration-300
+          className='w-[300px] mt-10 cursor-pointer rounded-full shadow-xl shadow-red-600 transition-all duration-300
           hover:shadow-indigo-600 md:w[350px]'
           />
-        </div>
+        </motion.div>
 
-        <div className='flex max-w-[600px] flex-col items-center justify-center gap-3 text-center relative' >
-          <h3 className='bg-gradient-to-r from-indigo-600 to-red-600 bg-clip-text text-transparent text-2xl md:text-3xl'>السلام علیکم</h3>
+        <div 
+        className='flex max-w-[600px] flex-col items-center justify-center gap-3 text-center relative' >
+          <motion.h3 
+          initial={{x:50, opacity: 0 }}
+          animate={{x:0, opacity: 1 }}
+          transition={{duration:0.8, delay:0.2}}
+          className='mt-10 bg-gradient-to-r from-indigo-600 to-red-600 bg-clip-text text-transparent text-2xl md:text-3xl'>
+            السلام علیکم
+          </motion.h3>
           <p className='text-white pr-8 sm:pr-60 md:pr-96 lg:pr-96 xl:pr-96 text-[22px]'>
-  My Self,
-</p>
+            My Self,
+          </p>
 
-          <h1 className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
-            text-5xl font-bold md:text-7xl transition-all duration-600'>MUHAMMAD OSAMA</h1>
+          <motion.h1 
+          initial={{x:-50, opacity: 0 }}
+          animate={{x:0, opacity: 1 }}
+          transition={{duration: 1.2, delay: 0.2, ease: "easeOut"}}
+          className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
+            text-5xl font-bold md:text-7xl transition-all duration-600'>MUHAMMAD OSAMA</motion.h1>
 
             <h3 className="text-white text-2xl font-bold">
                  {' '}
