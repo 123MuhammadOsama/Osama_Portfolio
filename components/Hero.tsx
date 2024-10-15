@@ -22,7 +22,10 @@ const Hero = () => {
 
         <div className='flex max-w-[600px] flex-col items-center justify-center gap-3 text-center relative' >
           <h3 className='bg-gradient-to-r from-indigo-600 to-red-600 bg-clip-text text-transparent text-2xl md:text-3xl'>السلام علیکم</h3>
-          <p className='text-white pr-96 sm:pr-56 md:pr-96 text-[22px]'>My Self,</p>
+          <p className='text-white pr-8 sm:pr-60 md:pr-96 lg:pr-96 xl:pr-96 text-[22px]'>
+  My Self,
+</p>
+
           <h1 className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
             text-5xl font-bold md:text-7xl transition-all duration-600'>MUHAMMAD OSAMA</h1>
 
