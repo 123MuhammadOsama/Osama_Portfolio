@@ -31,18 +31,16 @@ const Navbar = () => {
                 </a>
             </ul>
 
-            
             {/* Hide the menu icons on md and larger screens */}
             <div className='md:hidden'>
-                {isOpen ? (
-                    <BiX onClick={menuOpen} size={30}/>
-                ) : (
-                    <BiMenu onClick={menuOpen} size={30}/>
-                )}
+                <BiMenu onClick={menuOpen} size={30} />
             </div>
 
             {isOpen && (
-                <div className={`fixed right-0 top-[100px] flex h-screen w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black/90 p-12 ${isOpen ? 'block' : 'hidden'}`}>
+                <div className={`fixed right-0 top-[100px] flex h-screen w-1/2 flex-col items-start justify-start gap-10 border-1 border-gray-800 bg-black/90 p-12`}>
+                    <div className='flex justify-end w-full'>
+                        <BiX onClick={menuOpen} size={30} />
+                    </div>
                     <ul className='flex flex-col gap-8'>
                         <a href="#home" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
                             <li>Home</li>
