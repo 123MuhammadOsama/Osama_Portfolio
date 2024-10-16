@@ -1,7 +1,6 @@
 'use client';
 import React, { useState } from 'react';
 import { BiMenu, BiX } from 'react-icons/bi';
-import { BsGithub, BsLinkedin, BsWhatsapp } from 'react-icons/bs';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +18,7 @@ const Navbar = () => {
 
             <ul className='hidden md:flex gap-10'>
                 <a href="#home" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
-                    <li>Home</li>
+                    <li>About me</li>
                 </a>
                 <a href="#tech" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
                     <li>Tech</li>
@@ -28,28 +27,17 @@ const Navbar = () => {
                     <li>Projects</li>
                 </a>
                 <a href="#contact" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
-                    <li>Contact</li>
+                    <li>Contact me</li>
                 </a>
             </ul>
 
-            <ul className='hidden md:flex gap-5'>
-                <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-green-500 hover:bg-opacity-100'>
-                    <BsWhatsapp />
-                </li>
-                <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-gray-400 hover:bg-opacity-100'>
-                    <BsGithub />
-                </li>
-                <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:bg-opacity-100'>
-                    <BsLinkedin />
-                </li>
-            </ul>
-
+            
             {/* Hide the menu icons on md and larger screens */}
             <div className='md:hidden'>
                 {isOpen ? (
-                    <BiX onClick={menuOpen} />
+                    <BiX onClick={menuOpen} size={30}/>
                 ) : (
-                    <BiMenu onClick={menuOpen} />
+                    <BiMenu onClick={menuOpen} size={30}/>
                 )}
             </div>
 
@@ -68,18 +56,6 @@ const Navbar = () => {
                         <a href="#contact" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
                             <li>Contact</li>
                         </a>
-                    </ul>
-
-                    <ul className='flex flex-wrap gap-5'>
-                        <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-green-500 hover:bg-opacity-100'>
-                            <BsWhatsapp />
-                        </li>
-                        <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-purple-500 hover:bg-opacity-100'>
-                            <BsGithub />
-                        </li>
-                        <li className='cursor-pointer text-xl opacity-70 transition-all duration-300 hover:text-blue-500 hover:bg-opacity-100'>
-                            <BsLinkedin />
-                        </li>
                     </ul>
                 </div>
             )}
