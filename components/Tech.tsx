@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Tech = () => {
 
   const varients = {
-    hidden:{oppacity:0, y:50},
+    hidden:{oppacity:0, y:100},
     visible:{opacity:1, y:0}
   }
   return (
@@ -31,7 +31,7 @@ const Tech = () => {
         </div>
         
         <div >
-          <BiLogoPostgresql className='cursor-pointer text-[80px] text-blue-500 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]'/>
+          <BiLogoPostgresql className='cursor-pointer text-[80px] text-blue-700 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]'/>
         </div>
         <div >
           <BiLogoMongodb className='cursor-pointer text-[80px] text-green-600 transition-all duration-300 hover:-translate-y-5 sm:text-[100px] md:text-[120px]'/>

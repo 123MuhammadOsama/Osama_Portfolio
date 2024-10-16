@@ -1,9 +1,10 @@
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Project from "@/components/Project";
 import Tech from "@/components/Tech";
-// import { div } from "framer-motion/client";
+
 
 
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
       <Tech/>
       <Project/>
       <Contact/>
+      <Footer/>
     </div>
     </div>
     
