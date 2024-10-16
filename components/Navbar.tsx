@@ -10,12 +10,14 @@ const Navbar = () => {
     };
 
     return (
-        <nav className='fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-6 text-white backdrop-blur-md md:justify-evenly'>
-            <a href='#home' className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
-             opacity-100 text-3xl font-semibold font-great transition-all duration-300 hover:opacity-80'>
+        <nav className='fixed top-0 z-10 flex w-full items-center justify-between border-b border-b-gray-700 bg-black/70 px-16 py-3 text-white backdrop-blur-md md:justify-evenly'>
+            <div>
+            <a href='#home' className='bg-gradient-to-r from-red-600 to-indigo-500 bg-clip-text text-transparent
+             opacity-100 text-5xl font-semibold font-great transition-all duration-300 hover:opacity-80'>
                 Osama
             </a>
-
+            </div>
+            <div>
             <ul className='hidden md:flex gap-10'>
                 <a href="#home" className='cursor-pointer opacity-70 transition-all duration-300 hover:opacity-100'>
                     <li>About me</li>
@@ -30,8 +32,8 @@ const Navbar = () => {
                     <li>Contact me</li>
                 </a>
             </ul>
+            </div>
 
-            {/* Hide the menu icons on md and larger screens */}
             <div className='md:hidden'>
                 <BiMenu onClick={menuOpen} size={30} />
             </div>

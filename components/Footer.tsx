@@ -4,8 +4,8 @@ import { BsWhatsapp, BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-10  w-full bg-transparent text-white">
-      <div className="flex items-center justify-center gap-10 text-3xl">
+    <footer className="fixed bottom-10  w-full bg-transparent text-white ">
+      <div className="flex items-center justify-center gap-10 text-2xl">
         
         
           {/* WhatsApp */}
