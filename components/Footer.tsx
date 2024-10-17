@@ -7,7 +7,7 @@ import { TbBrandWhatsapp } from 'react-icons/tb'
 const Footer = () => {
   return (
     <div className='flex flex-col items-center justify-center gap-2 pb-40'>
-            <a href="mailto:connect.uleo3110@gmail.com?subject=Hello%20Osama&body=Hire%20me">
+            <a href="mailto:uleo3110@gmail.com?subject=Hello%20Osama&body=Hire%20me">
                 <div className='flex text-2xl gap-1'>
                     <MdMarkEmailRead className='text-pink-500'/>
                     <span className='text-white'>uleo3110@gmail.com</span>

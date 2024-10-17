@@ -23,11 +23,14 @@ const Contact = () => {
   return (
     <div id='contact' className='min-h-[70vh] min-w-full flex items-center justify-center'>
       <div className='flex flex-col items-center justify-center gap-3 space-y-6 p-14'>
-        <div className='flex flex-col md:flex-row items-center text-center md:text-left text-5xl md:text-7xl'>
-          <h1 className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent'>
+        <div className='flex flex-col md:flex-row items-center text-center md:text-left md:text-7xl'>
+          <h1 className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent text-5xl'>
             Get in Touch
           </h1>
-          <FaPhone className='text-red-500 text-4xl md:text-5xl mt-5 md:mt-0 md:ml-4' />
+          <div className='text-red-500 text-3xl md:text-5xl mt-5 md:mt-0 md:ml-4'>
+          <FaPhone/>
+          </div>
+          
         </div>
 
         <p className='text-center text-lg font-semibold text-white'>
