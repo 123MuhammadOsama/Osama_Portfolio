@@ -14,9 +14,10 @@ const Contact = () => {
     
     if (state.succeeded) {
       console.log("Form successfully submitted!");
-    } else if (state.errors && state.errors.length > 0) {  // Safely checking for errors
+    } else if (state.errors && Array.isArray(state.errors) && state.errors.length > 0) {
       console.log("Submission failed:", state.errors);
     }
+    
   };
 
   return (
@@ -37,7 +38,7 @@ const Contact = () => {
           <form onSubmit={handleSubmission} className="flex flex-col gap-4 ">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
               <div>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name" className='text-white'>Name</label>
                 <input
                   id="name"
                   type="text"
@@ -48,27 +49,27 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className='text-white'>Email</label>
                 <input
                   id="email"
                   type="email"
                   name="email"
                   className="p-2 border border-gray-300 rounded-md w-full focus:ring-4 focus:ring-indigo-600 outline-none transition-all duration-200"
                   required
-                  placeholder='john@gmail.com'
+                  placeholder='johndoe@gmail.com'
                 />
                 <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
             </div>
 
             <div className='col-span-1'>
-              <label htmlFor="message">Message</label>
+              <label htmlFor="message" className='text-white'>Message</label>
               <textarea
                 id="message"
                 name="message"
                 className="p-2 border border-gray-300 rounded-md w-full focus:ring-4 focus:ring-indigo-600 outline-none transition-all duration-200"
                 required
-                placeholder='Hello Osama!'
+                placeholder='Hi, Osama!...'
               />
               <ValidationError prefix="Message" field="message" errors={state.errors} />
             </div>
@@ -80,8 +81,6 @@ const Contact = () => {
             >
               {state.submitting ? 'Sending...' : 'Send'}
             </button>
-
-            <div className='mt-10 border-transparent'/>
 
             {state.succeeded && (
               <p className='text-center text-lg font-semibold text-green-500 mt-4'>

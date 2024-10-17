@@ -1,4 +1,5 @@
 import Contact from "@/components/Contact";
+import Flotingbar from "@/components/Flotingbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,7 @@ export default function Home() {
       <Tech/>
       <Project/>
       <Contact/>
+      <Flotingbar/>
       <Footer/>
     </div>
     </div>
