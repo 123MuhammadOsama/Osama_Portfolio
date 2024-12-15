@@ -31,7 +31,7 @@ const Hero = () => {
     <div id='home' className='px-16 flex min-h-screen w-full items-center justify-center py-28 md:px-32'>
       <div className='flex flex-col items-center justify-center gap-10 text-white'>
         <motion.div
-          initial={{ y: -50, opacity: 0 }}
+          // initial={{ y: -50, opacity: 0 }}
           animate={{
             y: scrollDirection === 'down' ? 50 : -50,  // Change y based on scroll direction
             opacity: 1
@@ -73,7 +73,7 @@ const Hero = () => {
           animate={{x:0, opacity: 1 }}
           transition={{duration: 1.2, delay: 0.2}}
           className='bg-gradient-to-r from-red-600 to-indigo-600 bg-clip-text text-transparent
-            text-5xl font-bold md:text-7xl'>MUHAMMAD OSAMA</motion.h1>
+            text-5xl font-bold md:text-7xl mb-5'>MUHAMMAD OSAMA</motion.h1>
 
             <h3 className="text-white text-2xl font-bold">
                  {' '}
@@ -96,7 +96,7 @@ const Hero = () => {
            initial={{y:50, opacity: 0 }}
            animate={{y:0, opacity: 1 }}
            transition={{duration:0.8, delay:0.2}}
-          className='md:text-base text-pretty text-sm text-gray-400'>
+          className='md:text-base text-pretty text-sm text-gray-40 mt-5'>
           <p >As a Software Engineer, I specialize in web development and data analysis, leveraging a robust skill set in modern technologies to deliver innovative solutions. My  expertise lies in crafting dynamic and responsive user interfaces using <span className='text-pink-600'>React.js</span> and <span className='text-pink-600'>Next.js</span>, complemented by <span className='text-pink-600'><Link href='https://tailwindcss.com/' target='_blank'>Tailwind Css</Link></span> for streamlined styling. I excel in creating  engaging animations and transitions using <span className='text-pink-600'>Framer Motion</span> and <span className='text-pink-600'>GSAP</span>, enhancing user experience through interactive design.
           </p>
 
