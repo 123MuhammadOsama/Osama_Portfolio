@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaPhone } from 'react-icons/fa';
 import { useForm, ValidationError } from '@formspree/react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("mvgoowey");
@@ -27,9 +28,21 @@ const Contact = () => {
           <h1 className='bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent text-5xl'>
             Get in Touch
           </h1>
-          <div className='text-red-500 text-3xl md:text-5xl mt-5 md:mt-0 md:ml-4'>
-          <FaPhone/>
-          </div>
+          <div className="text-red-500 text-3xl mt-5 md:mt-0 md:ml-4">
+      <motion.div
+        animate={{
+          x: [0, -3, 3, -3, 3, 0], // Moves left and right
+          y: [0, 1, -1, 1, -1, 0], // Adds slight up-down movement for realism
+        }}
+        transition={{
+          duration: 0.8, // Duration of the full cycle
+          repeat: Infinity, // Loops the animation
+          repeatType: 'loop', // Keeps repeating seamlessly
+        }}
+      >
+        <FaPhone />
+      </motion.div>
+    </div>
           
         </div>
 

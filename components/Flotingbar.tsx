@@ -8,7 +8,7 @@ import { MdOutlineWork } from "react-icons/md";
 
 const Flotingbar = () => {
   return (
-    <footer className="fixed bottom-10 left-1/2 transform -translate-x-1/2  w-auto  bg-pink-50
+    <footer className="fixed bottom-10 left-1/2 transform -translate-x-1/2  w-auto  bg-pink-200
      backdrop-blur-md rounded-full shadow-lg px-4 py-2 text-purple-500 border-2 border-pink-400">
       <div className="flex items-center justify-center gap-10 text-4xl ">
         
